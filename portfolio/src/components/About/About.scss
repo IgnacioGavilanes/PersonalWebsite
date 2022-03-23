@@ -1,0 +1,114 @@
+//NEED TO FIND A WAY TO ACCESS VARIABLES DECLARED IN APP.SCSS
+$accent: #FF5722;
+$lightGrey: #E7E7E5;
+$discreet: #9D9D9D;
+$hoverTransition: 0.4s;
+$horizontalPadding: 1.875rem;
+$verticalPadding: 1.125rem; 
+$mobileTitleFontSize: 2.8rem;
+$desktopTitleFontSize: 8rem;
+$mobileMarginBtwnSections: 8rem;
+$desktopMarginBtwnSections: 6rem;
+@mixin title() {
+    background: linear-gradient( 
+                to bottom, 
+                transparent 70%, $accent 30%
+            );
+            font-weight: 700;
+            font-size: $mobileTitleFontSize;
+            display: inline-block;
+            margin: 0 auto;
+}
+
+
+#about {
+    .aboutTitleWrapper{
+        margin-top: $mobileMarginBtwnSections;
+        padding: $horizontalPadding;
+        display: flex; 
+        .aboutTitle{
+            @include title;
+        }
+    }
+    .aboutWrapper {
+        padding: 0 $horizontalPadding 0 $horizontalPadding;
+        margin-top: 3rem;
+        .aboutInfo1{}
+        .hobbiesWrapper{
+            margin-top: 1rem;
+            display: flex;
+            justify-content: space-between;
+
+            .hobbiesCol1, .hobbiesCol2{
+                list-style: none;
+            }
+        }
+        .aboutInfo2{
+            margin-top: 1rem;
+        }
+    }
+}
+
+//Media Queries
+@media (min-width: 600px) {
+    #about {
+        .aboutTitleWrapper{
+            .aboutTitle{
+                font-size: $desktopTitleFontSize;
+            }
+        }
+        .aboutWrapper {
+            border: 1px solid black;  
+            border-radius: 1.5rem; 
+            width: 70vw;
+            margin: 3rem auto;
+            padding: 2rem;
+            background-color: transparent;
+            text-align: center;
+            
+            .aboutInfo1{
+                font-size: 1.2rem;
+            }
+            .hobbiesWrapper{
+                justify-content: space-around;
+                border: 1px solid black;  
+                border-radius: 1.5rem; 
+                margin: 3rem auto;
+                padding: 2rem;
+                background-color: $lightGrey;
+                text-align: center;
+    
+                .hobbiesCol1, .hobbiesCol2{
+                    list-style: none;
+                    background-color: transparent;
+                    text-align: left;
+                    li {
+                        background-color: transparent;
+                        font-size: 1.2rem;
+                    }
+                }
+            }
+            .aboutInfo2{
+                font-size: 1.2rem;
+                margin-top: 1rem;
+            }
+        }
+    }
+}
+@media (min-width: 795px) {
+    #about {
+        .aboutTitleWrapper{
+            display: inline;
+        }
+        .aboutWrapper {
+            width: 60vw;
+            margin-left: 2rem;
+            text-align: left;
+            .hobbiesWrapper{
+                margin-left: 0;
+                text-align: left;
+            }
+
+        }
+    }
+}

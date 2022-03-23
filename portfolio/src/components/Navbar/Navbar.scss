@@ -2,9 +2,12 @@
 $accent: #FF5722;
 $lightGrey: #E7E7E5;
 $hoverTransition: 0.4s;
+$horizontalPadding: 1.875rem;
+$verticalPadding: 1.125rem; 
+
 
 nav {
-    padding: 1.125rem 1.875rem 1.125rem 1.875rem;
+    padding: $verticalPadding $horizontalPadding $verticalPadding $horizontalPadding;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -111,7 +114,7 @@ nav {
     nav {
         #logoWrapper {
             #logo{
-                font-size: 2.5rem;
+                font-size: 1.5rem;
             }
         }
         #burgerWrapper {

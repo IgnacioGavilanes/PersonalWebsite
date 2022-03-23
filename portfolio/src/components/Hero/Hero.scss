@@ -1,0 +1,147 @@
+//NEED TO FIND A WAY TO ACCESS VARIABLES DECLARED IN APP.SCSS
+$accent: #FF5722;
+$lightGrey: #E7E7E5;
+$discreet: #9D9D9D;
+$hoverTransition: 0.4s;
+$horizontalPadding: 1.875rem;
+$verticalPadding: 1.125rem; 
+$mobileTitleFontSize: 2.8rem;
+$desktopTitleFontSize: 8rem;
+$mobileMarginBtwnSections: 8rem;
+$desktopMarginBtwnSections: 6rem;
+@mixin title() {
+    background: linear-gradient( 
+                to bottom, 
+                transparent 70%, $accent 30%
+            );
+            font-weight: 700;
+            font-size: $mobileTitleFontSize;
+            display: inline-block;
+            margin: 0 auto;
+}
+@mixin button() {
+    border: none;
+    border-radius: 5rem;
+    color: $lightGrey;
+    background-color: black;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: 0.4s;
+
+    &:hover {
+        background-color: $accent;
+        transform: scale(1.1)
+    }
+    &:active {
+        transform: scale(0.9);
+    }
+}
+
+
+#hero {
+    margin-top: $mobileMarginBtwnSections;
+    padding: $horizontalPadding;
+    .heroTitleWrapper{
+        display: flex; 
+        .heroTitle {
+            @include title;
+        }
+    }
+
+    .heroWrapper{
+        padding: 0 $horizontalPadding 0 $horizontalPadding;
+        margin-top: 3rem;
+        .heroSubTitle{
+            font-weight: 600;
+            font-size: 1.3rem;
+            .wave {
+                font-size: 2em;
+                margin-left: 0.5rem;
+                display: inline-block;
+                transform-origin: 70% 70%; //Pivot around the bottom-left palm
+                animation: infinite waveAnimation 2.5s;
+            }
+        }
+
+        .heroInfo {
+            margin-top: 1rem;
+            .heroHighlighted{
+                color: $discreet;
+                font-size: 0.8rem;
+                font-style: italic;
+            }
+        }
+
+        #cta {
+            margin-top: 2rem;
+            @include button;
+            width: 8rem;
+            height: 3rem;
+        }
+    }
+}
+
+//Media Queries
+@media (min-width: 600px) {
+    #hero {
+        margin-top: $desktopMarginBtwnSections;
+        .heroTitleWrapper{
+            display: flex;
+            .heroTitle {
+                font-size: $desktopTitleFontSize;
+                display: inline-block;
+                margin: auto;
+            }
+        }
+        .heroWrapper{                
+            border: 1px solid black;  
+            border-radius: 1.5rem; 
+            width: 70vw;
+            margin: 3rem auto;
+            padding: 2rem;
+            background-color: $lightGrey;
+            text-align: center;
+            .heroSubTitle{
+                font-size: 1.6rem;
+                background-color: transparent;
+                .wave {
+                    background-color: transparent;
+                }
+            }
+            .heroInfo {
+                font-size: 1.2rem;
+                background-color: transparent;
+                .heroHighlighted{
+                    background-color: transparent;
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+    
+}
+
+@media (min-width: 795px) {
+    #hero {
+        .heroTitleWrapper{
+            display: inline;
+        }
+        .heroWrapper{         
+            width: 60vw;
+            margin-left: 0;
+            text-align: left;
+        }
+    }
+}
+
+//Keyframes animation
+@keyframes waveAnimation {
+    0% { transform: rotate( 0.0deg) }
+   10% { transform: rotate(14.0deg) }  /* The following five values can be played with to make the waving more or less extreme */
+   20% { transform: rotate(-8.0deg) }
+   30% { transform: rotate(14.0deg) }
+   40% { transform: rotate(-4.0deg) }
+   50% { transform: rotate(10.0deg) }
+   60% { transform: rotate( 0.0deg) }  /* Reset for the last half to pause */
+  100% { transform: rotate( 0.0deg) }
+}

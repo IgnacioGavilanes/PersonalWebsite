@@ -1,0 +1,15 @@
+[
+    {"id": 1, "title": "ReactJS","institution": "CoderHouse", "modality":"Live Online Course ", 
+        "dates":"Oct - Dec 2021", "repo":"https://github.com/IgnacioGavilanes/ReactJs", 
+        "topics":["git", "JSX", "Props", "States", "Hooks", "Firebase/Firestore", "APIs", "Routing", "Context"]},
+
+    {"id": 2, "title": "JS", "institution": "CoderHouse", "modality":"Live Online Course ",
+        "dates":"Ago - Sept 2021", "repo":"https://www.github.com/ignaciogavilanes/JavaScript", 
+        "topics":["Basic JS synthax", "jQuery", "JSON", "Asynchronous interactions (AJAX)", 
+            "Local/Session storage", "Intro to API calls" ]},
+
+    {"id": 3, "title": "Python", "institution": "Instituto BIOS", "modality":"Live Online Course ", 
+        "dates":"Apr - Aug 2021", "repo":"https://www.github.com/ignaciogavilanes/Django", 
+        "topics":["Basic Python synthax", "HTML/CSS", "Django", "Intro to MySQL"]}
+]
+

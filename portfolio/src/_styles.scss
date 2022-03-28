@@ -1,0 +1,76 @@
+//FONTS
+$primary-font: 'Playfair Display', serif;
+$secondary-font: 'Cinzel', serif;
+
+//COLORS
+$accent: #FF5722;
+$darkGrey: #D6D6D6;
+$lightGrey: #E7E7E5;
+$discreet: #9D9D9D;
+
+//ANIMATIONS
+$hoverTransition: 0.4s;
+
+//BASIC STYLES
+$horizontalPadding: 1.875rem;
+$verticalPadding: 1.125rem; 
+
+//MOBILE
+$mobileTitleFontSize: 2.8rem;
+$mobileSubTitleFontSize:2rem;
+$mobileMarginBtwnSections: 12rem;
+
+
+//DESKTOP
+$desktopTitleFontSize: 6rem;
+$desktopMarginBtwnSections: 6rem;
+
+
+@mixin title() {
+    background: linear-gradient( 
+                to bottom, 
+                transparent 70%, $accent 30%
+            );
+            font-weight: 700;
+            font-size: $mobileTitleFontSize;
+            display: inline-block;
+            margin: 0 auto;
+}
+@mixin button() {
+    border: none;
+    border-radius: 5rem;
+    color: $lightGrey;
+    background-color: black;
+    font-size: 1.1em;
+    font-weight: 900;
+    cursor: pointer;
+    transition: $hoverTransition;
+
+    &:hover {
+        background-color: $accent;
+        transform: scale(1.1)
+    }
+    &:active {
+        transform: scale(0.9);
+    }
+}
+@mixin icon() {
+    background-color: transparent;
+    color: black;
+    transition: $hoverTransition;
+    font-size: 3em;
+    text-align: center;
+    margin: 1rem;
+
+    &:hover {
+        color: $accent;
+        transform: scale(1.2);
+    }
+    &:hover + .figcaption {
+        transform: scale(1.2);
+    }
+}
+
+
+
+

@@ -1,0 +1,139 @@
+@use '../../../styles' as *;
+
+#future {
+    .futureSubTitleWrapper{
+        .futureSubTitle {
+            font-weight:600;
+            font-size:2.4rem;
+            text-align: center;
+            margin-top: 4rem; // 1/2 $mobileMarginBtwnSections
+        }
+    }
+    .futureInfoWrapper{
+        margin-top: 1rem;
+        .futureInfo{
+            
+        }
+    }
+    .futureIconsWrapper{
+        border: 1px solid black;  
+        border-radius: 1.5rem; 
+        padding: 1rem;
+        background-color: $lightGrey;
+
+        margin-top: 2rem;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        // background-color: transparent;
+        // text-align: center;
+        // max-width: 50vw; //THESE TWO ARE FOR BIGGER SCREEN SIZES
+        // margin: auto; //THESE TWO ARE FOR BIGGER SCREEN SIZES
+        figure{
+            background-color: $lightGrey;
+            // background-color: $lightGrey;
+            text-align: center;
+            .futureIcon{        
+                background-color: transparent;
+                @include icon;
+                &:hover + .futureFigcaption {
+                    transition: $hoverTransition;
+                    transform: scale(1.2);
+                    background-color: transparent;;
+                }
+                
+            }
+            .futureFigcaption{
+                background-color: transparent;
+                text-align: center;                    
+            }
+        }
+    }
+
+    .futureRationaleWrapper{
+        margin-top: 2rem;
+        // text-align: center;
+        .futureRationale{}
+    }
+}
+
+//Media Queries
+@media (max-width: 397px) {
+    #future {
+        .futureSubTitleWrapper{
+            .futureSubTitle {
+            }
+        }
+        .futureInfoWrapper{
+            .futureInfo{     
+            }
+        }
+        .futureIconsWrapper{
+            figure{
+                .futureIcon{        
+                    .futureIconFigcaption{                  
+                    }
+                }
+            }
+        }
+    
+        .futureRationaleWrapper{
+            .futureRationale{}
+        }
+    }
+}
+@media (min-width: 600px) {
+    #future {
+        .futureSubTitleWrapper{
+            .futureSubTitle {
+            }
+        }
+        .futureInfoWrapper{
+            .futureInfo{     
+            }
+        }
+        .futureIconsWrapper{
+            figure{
+                .futureIcon{        
+                    .futureIconFigcaption{                  
+                    }
+                }
+            }
+        }
+    
+        .futureRationaleWrapper{
+            .futureRationale{}
+        }
+    }
+}
+@media (min-width: 795px) {
+    #future {
+        max-width: 37.925rem;
+        
+        width: 40vw;
+        border: solid 1px black;
+        border-radius: 2rem;
+        padding: 1rem;
+        .futureSubTitleWrapper{
+            .futureSubTitle {
+            }
+        }
+        .futureInfoWrapper{
+            .futureInfo{     
+            }
+        }
+        .futureIconsWrapper{
+            figure{
+                .futureIcon{        
+                    .futureIconFigcaption{                  
+                    }
+                }
+            }
+        }
+    
+        .futureRationaleWrapper{
+            .futureRationale{}
+        }
+    }
+}
+

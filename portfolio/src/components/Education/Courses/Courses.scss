@@ -1,0 +1,153 @@
+@use '../../../styles' as *;
+
+.course { //HAS BORDER & BACKGROUND ON DESKTOP 
+    text-align: center;
+    scroll-snap-align: center; //HORIZONTAL SCROLL
+    .courseInfo{
+        .courseTitle {
+            font-size: $mobileSubTitleFontSize;
+            font-weight: 500;
+            margin-top: 3rem; //RECENTLY ADDED
+        }
+        .courseInlineStyle{
+            display: flex;
+            justify-content: center;
+            margin-top: 1rem; //RECENTLY ADDED
+            .courseInstitute{
+                font-weight: 400;
+                margin-right: 1rem;
+                
+            }
+            .courseModality{
+                font-weight: 400;
+                font-size: 0.7rem;
+                color: $discreet;
+            }
+        }
+        .courseDates{
+            font-weight: 400;
+            color: $accent;
+            margin-top: 1rem; //RECENTLY ADDED
+        }
+        .courseRepoLink{
+            text-decoration: none;
+            color: black;
+            .courseRepoText{
+                // margin-top: 12rem; //RECENTLY ADDED
+                font-weight: 400;
+                transition: $hoverTransition;
+                display: inline;
+                &:hover {
+                    transform: scale(1.1)
+                }
+                &:active {
+                    transform: scale(0.9);
+                }
+                .courseRepoArrow{
+                    color: $accent;
+                }
+            }
+        }
+    }
+    .topicsWrapper{ //HAS BORDER & BACKGROUND ON DESKTOP 
+        display: flex;
+        justify-content: space-between;
+        border: 1px solid black;  
+        border-radius: 1.5rem; 
+        width: 70vw;
+        margin: 2rem auto; //RECENTLY CHANGED, WAS  margin: 3rem auto;
+        padding: 2rem; //SHOULD IT BE 1 REM? AT SMALL SIZES BOTH COLUMNS GET TOO CLOSE TO EACH OTHER
+        background-color: $lightGrey;
+
+        .courseCol1, .courseCol2{
+            list-style: none;
+            text-align: left;
+            background-color: $lightGrey;
+            li {
+                background-color: $lightGrey;
+                // font-size: 80%;
+            }
+        }
+    }
+    #progressBarWrapper{
+        display: none;
+    }
+}
+
+
+//Media Queries
+@media (max-width: 397px) {
+    .course {
+        .topicsWrapper{
+            padding: 1rem;
+            .courseCol1, .courseCol2{
+                li {
+                    font-size: 80%;
+                }
+            }
+        }
+    }
+}
+@media (min-width: 600px) {
+    .course {
+        // padding-left: 1.875rem;
+        text-align: left;
+        .courseInfo{
+            padding-left:22%;
+            .courseTitle {
+                text-align: left;
+                font-size: 4rem;
+                // margin-left: $horizontalPadding;
+            }
+            .courseInlineStyle{
+                justify-content: left;
+                .courseInstitute{
+                }
+                .courseModality{
+                }
+            }
+            .courseDates{
+            }
+            .courseRepoLink{
+                .courseRepoText{
+                    &:hover {
+                    }
+                    &:active {
+                    }
+                    .courseRepoArrow{
+                    }
+                }
+            }
+        }
+        .topicsWrapper{ //HAS BORDER & BACKGROUND ON DESKTOP 
+            .courseCol1, .courseCol2{
+                li {
+                }
+            }
+        }
+        //HERE GOES PROGRESS BAR ON DESKTOP 
+        #progressBarWrapper{
+            justify-content: center;
+            .num{
+                font-family: $secondary-font;
+                margin: 0 1rem auto 1rem;
+            }
+            display: flex;
+            #progressBar {
+                #filledBar{
+                    height: 0.2rem;
+                    background-color: $accent;
+                    transition: all 1s;
+                }
+                #emptyBar{
+                    
+                    width: 15rem;
+                    height: 0.1rem;
+                    background-color: gray;
+                }
+            }
+        }
+    }
+}
+@media (min-width: 795px) {
+}

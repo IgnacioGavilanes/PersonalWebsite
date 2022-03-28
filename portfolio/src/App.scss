@@ -1,10 +1,4 @@
-//Variales
-$accent: #FF5722;
-$darkGrey: #D6D6D6;
-$lightGrey: #E7E7E5;
-$selection: #EFB9A8;
-$primary-font: 'Playfair Display', serif;
-$secondary-font: 'Cinzel', serif;
+@use './styles.scss' as *;
 
 //Import for $primary-font
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
@@ -21,5 +15,6 @@ $secondary-font: 'Cinzel', serif;
 }
 
 ::selection {
-  background: $selection;
+  background: $accent;
+  color: $lightGrey;
 }

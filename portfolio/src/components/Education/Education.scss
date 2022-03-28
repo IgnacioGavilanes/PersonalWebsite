@@ -1,0 +1,181 @@
+@use '../../styles' as *;
+
+#education {
+    margin-top: $mobileMarginBtwnSections;
+    padding: $horizontalPadding;
+    // position: relative; //Mantiene a las flechas en posición
+    .eduTitleWrapper{
+        display: flex; 
+        .eduTitle {
+            @include title;
+        }
+    }
+    .eduWrapper{
+        padding: 0 $horizontalPadding 0 $horizontalPadding;
+        margin-top: 3rem;
+        .eduInfo {
+            margin-top: 1rem;
+        }
+    }
+
+    // .sliderButton { //ALL OF THIS GOES UNCOMMENTED WITH SVG ARROWS...
+    //     display: none; //FOR MOBILE ONLY
+    //     border-style: none;
+    //     position: inherit;
+    //     cursor: pointer;
+    // }
+    // .right{
+    //     right: 1rem;
+    //     top: 24rem;
+    // }
+    // .left{
+    //     top: 24rem;
+    //     left: 1rem;
+    // }
+
+    .sliderButton {
+        display: none;
+    }
+
+    .coursesContainer{//ALLOWS FOR HORIZONTAL SCROLLING EN COURSES.JS
+        // transition: all 1s; //HORIZONTAL SCROLL
+        // scroll-behavior: smooth; //HORIZONTAL SCROLL
+        // scroll-snap-type: x mandatory; //HORIZONTAL SCROLL
+        // display:grid; //HORIZONTAL SCROLL
+        // grid-auto-flow:column; //HORIZONTAL SCROLL
+        // grid-auto-columns: 100%; //HORIZONTAL SCROLL
+        // height: 100vh; //HORIZONTAL SCROLL
+        // overflow-x: auto; //HORIZONTAL SCROLL
+        // overscroll-behavior-inline: contain; //HORIZONTAL SCROLL             //UNCOMMENT FOR DESKTOP/TABLET SIZES
+
+    }
+
+    .cvButtonWrapper {
+        text-align: center;
+        #cv{
+            @include button;
+            width: 14rem;
+            height: 3rem;
+            margin-top: 3rem;
+        }
+    }
+
+    .extraContainer {
+        display: block;
+    }
+    
+}
+
+//Media Queries
+@media (min-width: 600px) {
+    #education {
+        .eduTitleWrapper{
+            .eduTitle {
+                font-size: $desktopTitleFontSize;
+                margin: 0;
+                
+            }
+        }
+        .eduWrapper{
+            .eduInfo {
+            }
+        }
+        // .sliderButton { ALL OF THIS GOES UNCOMMENTED IF I DECIDE TO USE SVG ARROWS
+        //     position: absolute;
+        //     display: inline; //NONE for Mobile
+        // }
+        .arrowsContainer{
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            .sliderButton{
+                display: inline; //NONE for Mobile
+                border-style: none;
+                // position: inherit;
+                cursor: pointer;
+                background-color: transparent;
+            } 
+        }
+        .right{
+            right: $horizontalPadding;
+        }
+        .left{
+        }
+
+        .coursesContainer{//ALLOWS FOR HORIZONTAL SCROLLING EN COURSES.JS
+            transition: all 1s; //HORIZONTAL SCROLL
+            scroll-behavior: smooth; //HORIZONTAL SCROLL
+            scroll-snap-type: x mandatory; //HORIZONTAL SCROLL
+            display:grid; //HORIZONTAL SCROLL
+            grid-auto-flow:column; //HORIZONTAL SCROLL
+            grid-auto-columns: 100%; //HORIZONTAL SCROLL
+            // height: 100vh; //HORIZONTAL SCROLL
+            overflow-x: auto; //HORIZONTAL SCROLL
+            overscroll-behavior-inline: contain; //HORIZONTAL SCROLL 
+            border: solid 1px black;
+            border-radius: 5rem;
+            width: 90vw;
+            margin: auto;
+
+    
+        }
+        
+        .cvButtonWrapper {
+            margin-top: 6rem;
+            #cv{
+            }
+        }
+
+        .extraContainer {
+            margin-top: 6rem;
+            
+        }
+    }
+}
+
+@media (min-width: 795px) {
+    #education {
+        .eduTitleWrapper{
+            .eduTitle {
+            }
+        }
+        .eduWrapper{
+            .eduInfo {
+            }
+        }
+    
+        // .sliderButton { //ALL OF THIS GOES UNCOMMENTED WITH SVG ARROWS...
+        //     display: none; //FOR MOBILE ONLY
+        //     border-style: none;
+        //     position: inherit;
+        //     cursor: pointer;
+        // }
+        // .right{
+        //     right: 1rem;
+        //     top: 24rem;
+        // }
+        // .left{
+        //     top: 24rem;
+        //     left: 1rem;
+        // }
+    
+        .sliderButton {
+        }
+    
+        .coursesContainer{
+        }
+    
+        .cvButtonWrapper {
+            #cv{
+            }
+        }
+        .extraContainer {
+            display: flex;
+            justify-content: space-around;
+        }
+        
+    }
+}
+
+
+

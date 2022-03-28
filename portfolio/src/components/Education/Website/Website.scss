@@ -1,0 +1,174 @@
+@use '../../../styles' as *;
+
+#website {
+    // text-align: center;
+
+    .websiteSubTitleWrapper{
+        text-align: center;
+        .websiteSubTitle{
+            font-weight:600;
+            font-size:2.4rem;
+            margin-top: 4rem; // 1/2 $mobileMarginBtwnSections
+        }
+    }
+    .websiteInfoWrapper{
+        margin-top: 1rem;
+        .websiteInfo{}
+    }
+    .websiteIconsWrapper{
+        border: 1px solid black;  
+        border-radius: 1.5rem; 
+        padding: 1rem;
+        background-color: $lightGrey;
+
+        margin-top: 2rem;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        // max-width: 50vw; //THESE TWO ARE FOR BIGGER SCREEN SIZES
+        // margin: auto; //THESE TWO ARE FOR BIGGER SCREEN SIZES
+
+        figure{
+            text-align: center;
+            background-color: transparent;
+            .websiteIcon{
+                
+                @include icon;
+                &:hover + .websiteIconFigcaption {
+          
+                    transition: $hoverTransition;
+                    transform: scale(1.2);
+                }
+            }
+            .websiteIconFigcaption{
+                background-color: transparent;
+            }
+        }
+    }
+    .websiteRepoWrapper{
+        margin-top: 2rem;
+        .websiteRepoInfo{}
+        .websiteRepoLink{
+            text-align: center;
+
+            text-decoration: none;
+            color: black;
+            .websiteRepoText{
+                margin-top: 1rem;
+                font-weight: 400;
+                transition: $hoverTransition;
+                &:hover {
+                    transform: scale(1.1)
+                }
+                &:active {
+                    transform: scale(0.9);
+                }
+                .websiteRepoArrow{
+                    color: $accent;
+                }
+            }
+        }
+
+    }
+
+}
+
+//Media Queries
+@media (max-width: 397px) {
+    #website {    
+        .websiteSubTitleWrapper{
+            .websiteSubTitle{
+            }
+        }
+        .websiteInfoWrapper{
+            .websiteInfo{}
+        }
+        .websiteIconsWrapper{
+            figure{
+                .websiteIcon{
+                }
+                    .websiteIconFigcaption{
+                    }
+            }
+        }
+        .websiteRepoWrapper{
+            .websiteRepoInfo{}
+            .websiteRepoLink{
+                .websiteRepoText{
+                    .websiteRepoArrow{
+                    }
+                }
+            }
+    
+        }
+    
+    }
+}
+
+@media (min-width: 600px) {
+    #website {    
+        .websiteSubTitleWrapper{
+            .websiteSubTitle{
+            }
+        }
+        .websiteInfoWrapper{
+            .websiteInfo{}
+        }
+        .websiteIconsWrapper{
+            figure{
+                .websiteIcon{
+                }
+                    .websiteIconFigcaption{
+                    }
+            }
+        }
+        .websiteRepoWrapper{
+            .websiteRepoInfo{}
+            .websiteRepoLink{
+                .websiteRepoText{
+                    .websiteRepoArrow{
+                    }
+                }
+            }
+    
+        }
+    
+    }
+}
+@media (min-width: 795px) {
+    #website {    
+        max-width: 37.925rem;
+
+        width: 40vw;
+        border: solid 1px black;
+        border-radius: 2rem;
+        padding: 1rem;
+        .websiteSubTitleWrapper{
+            .websiteSubTitle{
+            }
+        }
+        .websiteInfoWrapper{
+            .websiteInfo{}
+        }
+        .websiteIconsWrapper{
+            figure{
+                .websiteIcon{
+                }
+                    .websiteIconFigcaption{
+                    }
+            }
+        }
+        .websiteRepoWrapper{
+            .websiteRepoInfo{}
+            .websiteRepoLink{
+                .websiteRepoText{
+                    .websiteRepoArrow{
+                    }
+                }
+            }
+    
+        }
+    
+    }
+}
+

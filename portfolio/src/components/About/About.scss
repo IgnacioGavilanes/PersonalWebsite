@@ -1,25 +1,4 @@
-//NEED TO FIND A WAY TO ACCESS VARIABLES DECLARED IN APP.SCSS
-$accent: #FF5722;
-$lightGrey: #E7E7E5;
-$discreet: #9D9D9D;
-$hoverTransition: 0.4s;
-$horizontalPadding: 1.875rem;
-$verticalPadding: 1.125rem; 
-$mobileTitleFontSize: 2.8rem;
-$desktopTitleFontSize: 8rem;
-$mobileMarginBtwnSections: 8rem;
-$desktopMarginBtwnSections: 6rem;
-@mixin title() {
-    background: linear-gradient( 
-                to bottom, 
-                transparent 70%, $accent 30%
-            );
-            font-weight: 700;
-            font-size: $mobileTitleFontSize;
-            display: inline-block;
-            margin: 0 auto;
-}
-
+@use '../../styles' as *;
 
 #about {
     .aboutTitleWrapper{

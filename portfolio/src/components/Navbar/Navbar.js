@@ -15,7 +15,7 @@ export const Navbar = () => {
   return (
     <nav>
         <div id='logoWrapper'>
-            <p id='logo'>iGNACIO j.<br/>gAVILANES</p>
+            <p className='logo hover-logo'>iGNACIO j.<br/>gAVILANES</p>
         </div>
 
         <div id='burgerWrapper'>

@@ -4,7 +4,7 @@ import { Navbar } from './components/Navbar/Navbar';
 import { Hero } from  './components/Hero/Hero';
 import {About} from './components/About/About';
 import {Education} from './components/Education/Education';
-// import {Contact} from './components/Contact/Contact';
+import {Contact} from './components/Contact/Contact';
 
 function App() {
   return (
@@ -13,6 +13,7 @@ function App() {
       <Hero/>
       <About/>
       <Education/>
+      <Contact/>
     </div>
   );
 }

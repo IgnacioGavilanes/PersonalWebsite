@@ -3,7 +3,8 @@ $primary-font: 'Playfair Display', serif;
 $secondary-font: 'Cinzel', serif;
 
 //COLORS
-$accent: #FF5722;
+// $accent: #FF5722;
+$accent:#C188E3;
 $darkGrey: #D6D6D6;
 $lightGrey: #E7E7E5;
 $discreet: #9D9D9D;
@@ -68,6 +69,20 @@ $desktopMarginBtwnSections: 6rem;
     }
     &:hover + .figcaption {
         transform: scale(1.2);
+    }
+}
+
+@mixin input() {
+    border-radius: 10px;
+    border: 1px solid $discreet;
+    box-shadow: none;
+    // width: 80%;
+    height: 3rem;
+    padding: 1rem;
+
+    &:focus{
+        outline: none;
+        border:1px solid $accent;
     }
 }
 

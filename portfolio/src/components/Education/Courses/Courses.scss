@@ -13,6 +13,7 @@
             display: flex;
             justify-content: center;
             margin-top: 1rem; //RECENTLY ADDED
+            align-items: baseline;
             .courseInstitute{
                 font-weight: 400;
                 margin-right: 1rem;
@@ -36,7 +37,8 @@
                 // margin-top: 12rem; //RECENTLY ADDED
                 font-weight: 400;
                 transition: $hoverTransition;
-                display: inline;
+                display: flex;
+                align-items: center;
                 &:hover {
                     transform: scale(1.1)
                 }
@@ -128,6 +130,7 @@
         //HERE GOES PROGRESS BAR ON DESKTOP 
         #progressBarWrapper{
             justify-content: center;
+            align-items: center;
             .num{
                 font-family: $secondary-font;
                 margin: 0 1rem auto 1rem;

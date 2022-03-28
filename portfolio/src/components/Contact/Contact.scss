@@ -1,0 +1,355 @@
+@use '../../styles' as *;
+
+#contact{
+    text-align: center;
+    padding: $horizontalPadding;
+    .contactTitleWrapper{
+        .contactTitle{
+            @include title;
+        }
+    }
+    #contactContainer{
+        #contactSubContainer{
+            .contactInfo{
+                margin-top: 2rem;
+            }
+            .contactWrapper{
+                margin-top: 2rem;
+                .formWrapper{
+                    #contactForm{
+                        
+                        .dataWrapper{
+                            display: flex;
+                            flex-direction: column;
+                            
+                            label{
+                                margin-top: 1rem;
+                                font-size: 1.2rem;
+                                font-weight: bold;
+                            }
+
+                            #name, #lastName{
+                                @include input;
+                            }
+                        }
+                        .messageWrapper {
+                            display: flex;
+                            flex-direction: column;
+                            label{
+                                margin-top: 1rem;
+                                font-size: 1.2rem;
+                                font-weight: bold;
+                            }
+                            #message{
+                                @include input;
+                                resize: vertical;
+                                min-height: 3rem; //DOUBLE CHECK THIS
+                            }
+                        }
+                        .buttonsWrapper{
+                            margin-top: 3rem;
+                            
+                            #submit{
+                                @include button;
+                                width: 7rem;
+                                height: 3rem;
+                            }
+                            .contactIconsWrapper{
+                                display: flex;
+                                flex-direction: row;
+                                justify-content: space-around;
+                                width: 7rem;
+                                margin: auto;
+                                a{         
+                                    .contactIcon{
+                                        @include icon;
+                                        font-size: 1.5rem;
+                                        &:active {
+                                            transform: scale(0.9);
+                                        }
+                                    }
+                                }
+
+                            }
+                        }
+                        .myEmailWrapper{
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: center;
+                            text-align: center;
+                            .clipboardInfo{
+                                font-size: 0.8rem;
+                            }
+                            .clipboard{
+                                margin-top: 1rem;
+                                justify-content: center;
+                                display: flex;
+                                align-items: center;
+                                // text-align: center;
+                                // display: block;
+                                .myEmail{}
+                                .myEmailIcon{
+                                    // margin-left: 1rem;
+                                    @include icon;
+                                    &:active {
+                                        transform: scale(0.9);
+                                    }
+                                    font-size: 1.2rem;
+                                    cursor: pointer;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .circularTextWrapper{
+            display: none;
+            #circle{}
+        }
+    }
+}
+
+
+//Media Queries
+@media (max-width: 320px) {
+    #contact{
+        .contactTitleWrapper{
+            .contactTitle{
+            }
+        }
+        #contactContainer{
+            #contactSubContainer{
+                .contactInfo{
+                }
+                .contactWrapper{
+                    .formWrapper{
+                        #contactForm{
+                            .dataWrapper{
+                                label{
+                                }
+                                #name, #lastName{                            
+                                }
+                            }
+                            .messageWrapper {
+                                label{
+                                }
+                                #message{
+                                }
+                            }
+                            .buttonsWrapper{
+                                #submit{
+                                }
+                                .contactIconsWrapper{
+                                    a{         
+                                        .contactIcon{
+                                        }
+                                    }
+            
+                                }
+                            }
+                            .myEmailWrapper{
+                                .clipboardInfo{      
+                                }
+                                .clipboard{
+                                    // display: flex;
+                                    // align-items: center;
+                                    text-align: center;
+                                display: block;
+                                    .myEmail{
+                                    }
+                                    .myEmailIcon{
+                                    }
+                                }
+                            }
+            
+                        }
+                    }
+                }
+            }
+            .circularTextWrapper{
+                #circle{
+                }
+            }
+        }
+    }
+}
+@media (min-width: 600px) {
+    #contact{
+        text-align: left;
+        .contactTitleWrapper{
+            .contactTitle{
+                font-size: $desktopTitleFontSize;
+            }
+        }
+        #contactContainer{
+            #contactSubContainer{
+                .contactInfo{
+                }
+                .contactWrapper{
+                    .formWrapper{
+                        #contactForm{
+                            .dataWrapper{
+                                label{
+                                }
+                                #name, #lastName{                            
+                                }
+                            }
+                            .messageWrapper {
+                                label{
+                                }
+                                #message{
+                                }
+                            }
+                            .buttonsWrapper{
+                                #submit{
+                                }
+                                .contactIconsWrapper{
+                                    a{         
+                                        .contactIcon{
+                                        }
+                                    }
+            
+                                }
+                            }
+                            .myEmailWrapper{
+                                .clipboardInfo{
+                                }
+                                .clipboard{
+                                    .myEmail{}
+                                    .myEmailIcon{
+                                    }
+                                }
+                            }
+            
+                        }
+                    }
+                }
+            }
+            .circularTextWrapper{
+                #circle{
+                }
+            }
+        }
+    } 
+}
+
+@media (min-width: 795px) {
+    #contact{
+        .contactTitleWrapper{
+            .contactTitle{
+            }
+        }
+        #contactContainer{
+            display: flex;
+            #contactSubContainer{
+                .contactInfo{
+                }
+                .contactWrapper{
+                    margin-top: 2rem;
+                    border: solid 1px black;
+                    border-radius: 2rem;
+                    padding: 2rem;
+                    width: 75vw; //WAS 65VW
+                    .formWrapper{
+                        #contactForm{
+                            display: flex; //TO REPLICATE FIGMA DESIGN
+                            flex-wrap: wrap; //TO REPLICATE FIGMA DESIGN
+                            .dataWrapper{
+                                flex: 50%; //TO REPLICATE FIGMA DESIGN
+                                justify-content: space-between;
+                                label{
+                                    
+                                }
+                                #name, #lastName{     
+                                    margin-right: 2rem;   
+                                    max-width: 18rem;
+                                }
+                            }
+                            .messageWrapper {
+                                flex: 50%; //TO REPLICATE FIGMA DESIGN
+                                label{
+                                    
+
+                                }
+                                #message{
+                                    height: 9rem;
+                                }
+                            }
+                            .buttonsWrapper{
+                                display: inherit;  //TO REPLICATE FIGMA DESIGN
+                                flex-direction: row-reverse;  //TO REPLICATE FIGMA DESIGN
+                                #submit{
+                                }
+                                .contactIconsWrapper{
+                                    a{         
+                                        .contactIcon{
+                                        }
+                                    }
+            
+                                }
+                            }
+                            .myEmailWrapper{
+                                flex-direction: row;
+                                justify-content: center;
+                                display: flex;
+                                text-align: center;
+                                flex-wrap: wrap;
+                                align-content: center;
+                                align-items: baseline;
+                                border: solid 1px black;
+                                border-radius: 1rem;
+                                padding: 0.5rem;
+                                height: 3.5rem;
+                                background-color: $lightGrey;
+                                width: 30rem;
+                                flex: 100%;
+                                // flex: 50%; //TO DISPLAY NEXT TO BUTTONS
+                                .clipboardInfo{
+                                    margin-right: 1rem;
+                                    justify-content: center;
+                                    text-align: center;
+                                    display: flex;
+                                    align-content: stretch;
+                                    align-items: center;     
+                                    background-color: transparent;        
+                                }
+                                .clipboard{
+                                    margin-top: 0;
+                                    background-color: transparent;
+                                    align-items: center;
+                                    .myEmail{
+                                        background-color: transparent;
+                                    }
+                                    .myEmailIcon{
+                                    }
+                                }
+                            }
+            
+                        }
+                    }
+                }
+            }
+            .circularTextWrapper{
+                display: inline;
+                background-color: transparent;
+                width: 25vw;
+                // border: solid red 1px;
+                #circle{
+                    transition: all 1s;
+                    animation: linear 15s rotate infinite;
+                    // font-size: 6rem;
+                    letter-spacing: 1rem;
+                }
+            }
+        }
+    }
+}
+
+//Animation
+@keyframes rotate {
+    from {
+        transform: rotateZ(0deg)}
+    to {
+        transform: rotateZ(360deg)}
+}

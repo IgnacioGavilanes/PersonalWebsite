@@ -33,6 +33,9 @@
         .courseRepoLink{
             text-decoration: none;
             color: black;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
             .courseRepoText{
                 // margin-top: 12rem; //RECENTLY ADDED
                 font-weight: 400;

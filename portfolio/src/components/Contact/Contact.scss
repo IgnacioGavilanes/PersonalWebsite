@@ -29,6 +29,8 @@
                             }
 
                             #name, #lastName{
+                                background-color: $lightGrey;
+
                                 @include input;
                             }
                         }
@@ -42,6 +44,7 @@
                             }
                             #message{
                                 @include input;
+                                background-color: $lightGrey;
                                 resize: vertical;
                                 min-height: 3rem; //DOUBLE CHECK THIS
                             }
@@ -103,7 +106,7 @@
                 }
             }
         }
-        .circularTextWrapper{
+        .circularTextWrapper{ //PLAY WITH Z-INDEX SO THAT THERE IS NO OVERLAY WITH OTHER SECTIONS (NAVMENU, FORM, ETC)
             display: none;
             #circle{}
         }

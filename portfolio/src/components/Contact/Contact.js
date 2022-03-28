@@ -30,7 +30,7 @@ export const Contact = () => {
                 
                     <div className='contactWrapper'>
                         <div className='formWrapper'>
-                            <form id='contactForm' name="contact" method="POST" data-netlify="true">
+                            <form id='contactForm' name="contact" method="POST" data-netlify="true" autoComplete='off'>
                                 <div className='dataWrapper'>
                                     <label className='label' for='name' >Name</label>
                                     <input id='name' name='name' type='text'/>
@@ -69,7 +69,7 @@ export const Contact = () => {
                     </div>
                 </div>
 
-                <div className='circularTextWrapper'>
+                <div className='circularTextWrapper'> 
                     <div ref={circleInstance} id='circle'>THANK YOU!•</div>
                 </div>
             </div>

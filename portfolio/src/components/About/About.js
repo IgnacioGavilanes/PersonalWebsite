@@ -1,15 +1,24 @@
 import './About.scss';
 import React from 'react'
+//testing below:
+import { useGifFetch } from '../../utils/useGifFetch';
 
 export const About = () => {
+
+    // id, className, width, borderRadius
+    const aboutGif = '2FayYXU90QS9MmAIo', aboutClassName='aboutGif', aboutWidth = 300,  aboutBorderRadius = 6;
+    
   return (
     <section id='about'>
          <div className='aboutTitleWrapper'>
             <h2 className='aboutTitle'>
                 About.
             </h2>
+            <div className='hideAboutGif'>
+                {useGifFetch(aboutGif, aboutClassName, aboutWidth, aboutBorderRadius)}
+            </div>
         </div>
-
+        
         <div className='aboutWrapper'>
             <p className='aboutInfo1'>It is kind of hard to tell you more about me without taking too much 
                 of your time so, here, these are some random things I like:

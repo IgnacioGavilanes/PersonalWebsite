@@ -7,6 +7,14 @@
         .contactTitle{
             @include title;
         }
+        .hideContactGif {
+            display: none;
+            right: 5%;
+            position: absolute;
+            top: 420%;
+            left: -40%;
+            .contactGif{}
+        }
     }
     #contactContainer{
         #contactSubContainer{
@@ -241,6 +249,12 @@
     #contact{
         .contactTitleWrapper{
             .contactTitle{
+            }
+            .contactTitle:hover + .hideContactGif {
+                display: inline-flex;
+                margin-left: 80vw;
+                align-items: baseline;
+    
             }
         }
         #contactContainer{

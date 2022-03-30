@@ -9,6 +9,14 @@
         .eduTitle {
             @include title;
         }
+        .hideEducationGif {
+            display: none;
+            right: 5%;
+            position: absolute;
+            top: 240%;
+            left: -40%;
+            .educationGif{}
+        }
     }
     .eduWrapper{
         padding: 0 $horizontalPadding 0 $horizontalPadding;
@@ -73,7 +81,6 @@
             .eduTitle {
                 font-size: $desktopTitleFontSize;
                 margin: 0;
-                
             }
         }
         .eduWrapper{
@@ -137,6 +144,12 @@
     #education {
         .eduTitleWrapper{
             .eduTitle {
+            }
+            .eduTitle:hover + .hideEducationGif {
+                display: inline-flex;
+                margin-left: 80vw;
+                align-items: baseline;
+    
             }
         }
         .eduWrapper{

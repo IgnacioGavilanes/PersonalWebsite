@@ -8,6 +8,15 @@
         .aboutTitle{
             @include title;
         }
+        .hideAboutGif {
+            display: none;
+            right: 5%;
+            position: absolute;
+            top: 78%;
+            left: -40%;
+            .aboutGif{}
+        }
+        
     }
     .aboutWrapper {
         padding: 0 $horizontalPadding 0 $horizontalPadding;
@@ -78,6 +87,12 @@
     #about {
         .aboutTitleWrapper{
             display: inline;
+            .aboutTitle:hover + .hideAboutGif {
+                display: inline-flex;
+                margin-left: 80vw;
+                align-items: baseline;
+    
+            }
         }
         .aboutWrapper {
             width: 60vw;

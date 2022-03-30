@@ -1,14 +1,27 @@
 @use '../../styles' as *;
 
-
 #hero {
     margin-top: $mobileMarginBtwnSections;
     padding: $horizontalPadding;
+
     .heroTitleWrapper{
         display: flex; 
         .heroTitle {
             @include title;
         }
+        .hideHeroGif {
+            display: none;
+            right: 5%;
+            position: absolute;
+            top: 10%;
+            left: -40%;
+            .heroGif{}
+        }
+        // .heroTitle:hover + .hideHeroGif { //NEED TO ADD THIS IN A MEDIA QUERY BC I DON'T WANT IT IN SMALL SCREEN SIZES (min width: 795px)
+        //     display: inline-flex;
+        //     margin-left: 80vw;
+        //     align-items: baseline;
+        // }
     }
 
     .heroWrapper{
@@ -88,6 +101,11 @@
     #hero {
         .heroTitleWrapper{
             display: inline;
+            .heroTitle:hover + .hideHeroGif { //NEED TO ADD THIS IN A MEDIA QUERY BC I DON'T WANT IT IN SMALL SCREEN SIZES (min width: 795px)
+                display: inline-flex;
+                margin-left: 80vw;
+                align-items: baseline;
+            }
         }
         .heroWrapper{         
             width: 60vw;

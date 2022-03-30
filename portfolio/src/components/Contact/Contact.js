@@ -4,6 +4,8 @@ import { FaLinkedinIn } from "react-icons/fa";
 import { MdContentCopy } from "react-icons/md";
 import React, {useEffect, useRef} from 'react'
 import CircleType from "circletype";
+import { useGifFetch } from '../../utils/useGifFetch';
+
 
 export const Contact = () => {
     const circleInstance = useRef();
@@ -12,12 +14,17 @@ export const Contact = () => {
         new CircleType(circleInstance.current).radius(4);
     }, []);
 
+    const contactGif = 'lpnJDo7ExzUymI3JEv', contactClassName='contactGif', contactWidth = 300,  contactBorderRadius = 6;
+
     return (
         <section id='contact'>
             <div className='contactTitleWrapper'>
                 <h2 className='contactTitle'>
                     Say Hi!
                 </h2>
+                <div className='hideContactGif'>
+                    {useGifFetch(contactGif, contactClassName, contactWidth, contactBorderRadius)}
+                </div>
             </div>
 
             <div id='contactContainer'>

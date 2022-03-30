@@ -7,10 +7,17 @@ import { Future } from './Future/Future';
 import { CgArrowLongLeft, CgArrowLongRight } from "react-icons/cg";
 // import { leftArrow } from '../../leftArrow';
 // import { rightArrow } from './rightArrow.svg'
+import { useGifFetch } from '../../utils/useGifFetch';
+
+// id, className, width, borderRadius
+const educationGif = '3ohuAxV0DfcLTxVh6w', educationClassName='educationGif', educationWidth = 350,  educationBorderRadius = 6;
 
 export const Education = () => {
 
     const coursesList = [...courses]
+
+    
+
 
 
     const coursesListLength = coursesList.length
@@ -82,6 +89,9 @@ export const Education = () => {
             <h2 className='eduTitle'>
                 Education.
             </h2>
+            <div className='hideEducationGif'>
+                {useGifFetch(educationGif, educationClassName, educationWidth, educationBorderRadius)}
+            </div>
         </div>
         <div className='eduWrapper'>
             <p className='eduInfo'>

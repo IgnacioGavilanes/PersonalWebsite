@@ -26,21 +26,6 @@
         }
     }
 
-    // .sliderButton { //ALL OF THIS GOES UNCOMMENTED WITH SVG ARROWS...
-    //     display: none; //FOR MOBILE ONLY
-    //     border-style: none;
-    //     position: inherit;
-    //     cursor: pointer;
-    // }
-    // .right{
-    //     right: 1rem;
-    //     top: 24rem;
-    // }
-    // .left{
-    //     top: 24rem;
-    //     left: 1rem;
-    // }
-
     .sliderButton {
         display: none;
     }
@@ -58,13 +43,75 @@
 
     }
 
-    .cvButtonWrapper {
-        text-align: center;
-        #cv{
-            @include button;
-            width: 14rem;
+    #progressBarWrapper{
+        display: none;
+    }
+
+    .cvButtonWrapper{
+        margin-top:6rem;
+        justify-content: center;
+        display: flex;
+        #cv {
+            border: none; //BUTTON MIXIN SUBSTITUTION PROPS
+            border-radius: 5rem; //BUTTON MIXIN SUBSTITUTION PROPS
+            color: $lightGrey; //BUTTON MIXIN SUBSTITUTION PROPS
+            background-color: black; //BUTTON MIXIN SUBSTITUTION PROPS
+            cursor: pointer; //BUTTON MIXIN SUBSTITUTION PROPS
+            transition: $hoverTransition; //BUTTON MIXIN SUBSTITUTION PROPS
+            width: 18rem;
             height: 3rem;
-            margin-top: 3rem;
+            font-size: 1.1em;
+            display: flex;
+            flex-direction: row-reverse;
+            align-items: center;
+            justify-content: center;
+            transition:all 0.4s ease-in;
+            position:relative; //In order to use Overflow:hidden I need to change default position (static)
+            overflow: hidden; //Hides overflow from #circle clip-path's property
+            z-index:100;
+            &:hover {
+                transform: scale(1.05)
+            }
+            &:active {
+                transform: scale(0.95);
+            }
+            #cvCircle{
+                background-color: $accent;
+                clip-path: circle(1.1rem at 17.5rem 5rem);
+                transition:all 0.7s linear;
+                position:absolute;
+                z-index:1;
+                width:20rem;
+                height:10rem;
+                &:hover{
+                clip-path:circle(16rem at 16rem 5rem);
+                overflow: hidden;
+                }
+                &:hover + #cvText{
+                color: black;
+                }
+                .cvArrow{
+                    z-index: 2;
+                    margin-left: 17rem;
+                    margin-top: 4.4rem;
+                    color: black;
+                    font-size: 1.2rem;
+                    display: flex;
+                    justify-content: flex-end;
+                    transition: all 0.5s linear;
+                    background-color: transparent;
+                }
+            }
+            #cvText{
+                font-size: 1rem;
+                font-weight: 900;
+                background-color: transparent;
+                position:relative;
+                z-index:999;
+                margin-left:10%;
+                transition:all 0.5s ease-in;
+                margin-left: -2rem;
+            }
         }
     }
 
@@ -126,13 +173,29 @@
 
     
         }
-        
-        .cvButtonWrapper {
-            margin-top: 6rem;
-            #cv{
+
+        #progressBarWrapper{
+            margin-top: 1rem;
+            justify-content: center;
+            align-items: center;
+            .num{
+                font-family: $secondary-font;
+                margin: 0 1rem auto 1rem;
+            }
+            display: flex;
+            #progressBar {
+                #filledBar{
+                    height: 0.2rem;
+                    background-color: $accent;
+                    transition: all 1s;
+                }
+                #emptyBar{
+                    width: 15rem;
+                    height: 0.1rem;
+                    background-color: gray;
+                }
             }
         }
-
         .extraContainer {
             margin-top: 6rem;
             
@@ -177,6 +240,7 @@
     
         .coursesContainer{
         }
+        //----------------------------------------------------PROGRESSBAR----------------------------------------------------
     
         .cvButtonWrapper {
             #cv{

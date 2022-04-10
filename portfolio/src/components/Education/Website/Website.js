@@ -22,7 +22,7 @@ export const Website = () => {
 
         <div className='websiteIconsWrapper'>
             <figure><SiReact className='websiteIcon'/><figcaption className='websiteIconFigcaption'>ReactJs</figcaption></figure>
-            <figure><FaSass className='websiteIcon'/><figcaption className='websiteIconFigcaption'>Sass</figcaption></figure>
+            <figure><FaSass className='websiteIcon'/><figcaption className='websiteIconFigcaption'>Scss</figcaption></figure>
             <figure><FaGitAlt className='websiteIcon'/><figcaption className='websiteIconFigcaption'>git</figcaption></figure>
             <figure><SiFigma className='websiteIcon'/> <figcaption className='websiteIconFigcaption'>Figma</figcaption></figure>
             <figure><SiNetlify className='websiteIcon'/><figcaption className='websiteIconFigcaption'>Netlify</figcaption></figure>

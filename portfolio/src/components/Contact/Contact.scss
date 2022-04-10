@@ -36,7 +36,7 @@
                                 font-weight: bold;
                             }
 
-                            #name, #lastName{
+                            #name, #email{
                                 background-color: $lightGrey;
 
                                 @include input;
@@ -139,7 +139,7 @@
                             .dataWrapper{
                                 label{
                                 }
-                                #name, #lastName{                            
+                                #name, #email{                            
                                 }
                             }
                             .messageWrapper {
@@ -203,7 +203,7 @@
                             .dataWrapper{
                                 label{
                                 }
-                                #name, #lastName{                            
+                                #name, #email{                            
                                 }
                             }
                             .messageWrapper {
@@ -278,7 +278,7 @@
                                 label{
                                     
                                 }
-                                #name, #lastName{     
+                                #name, #email{     
                                     margin-right: 2rem;   
                                     max-width: 18rem;
                                 }

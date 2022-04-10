@@ -16,6 +16,10 @@ export const Contact = () => {
 
     const contactGif = 'lpnJDo7ExzUymI3JEv', contactClassName='contactGif', contactWidth = 300,  contactBorderRadius = 6;
 
+    function handleSubmit(e) {
+        e.preventDefault();
+    } //Prevents refreshing website after submitting form (default behavior), which would break SPA flow.
+
     return (
         <section id='contact'>
             <div className='contactTitleWrapper'>
@@ -37,16 +41,16 @@ export const Contact = () => {
                 
                     <div className='contactWrapper'>
                         <div className='formWrapper'>
-                            <form id='contactForm' name="contact" method="POST" data-netlify="true" autoComplete='off'>
+                            <form id='contactForm' name="contact" method="POST" data-netlify="true" autoComplete='off' onSubmit={handleSubmit}>
                                 <div className='dataWrapper'>
-                                    <label className='label' for='name' >Name</label>
+                                    <label className='label' htmlFor='name' >Name</label>
                                     <input id='name' name='name' type='text'/>
 
-                                    <label className='label' for='lastName'>Last Name</label>
-                                    <input id='lastName' name='lastName' type='text'/>
+                                    <label className='label' htmlFor='email'>Email</label>
+                                    <input id='email' name='email' type='text'/>
                                 </div>
                                 <div className='messageWrapper'>
-                                    <label className='label' for='message'>Message</label>
+                                    <label className='label' htmlFor='message'>Message</label>
                                     <textarea id='message' name='message' type='text'/>
                                 </div>
 

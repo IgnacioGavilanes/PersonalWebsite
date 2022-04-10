@@ -78,7 +78,6 @@ nav {
 
     .navMenu {
         display: none;
-        
         // position: fixed;
 
         .mobileMarginTop{
@@ -133,6 +132,24 @@ nav {
 
     .mobileInactive {
         pointer-events: none;
+
+        //CODE BELOW ALL TESTING
+        clip-path: circle(50px at 90% 10%);
+        -webkit-clip-path: circle(50px at 100% 10%);
+        transition: all 1s;
+        position: fixed; 
+        display: flex;
+        overflow-y: hidden;
+        top: -15rem;
+        left: 0; 
+        right: 0; 
+        margin-left: auto; 
+        margin-right: auto;
+        // background-color: black; //CHANGE THIS BACKGROUND COLOR FOR COOL COLOR BLENDING EFFECTS
+        z-index: 99;        
+        width: 100vw;
+
+        
     }
 
     .mobileActive{
@@ -150,7 +167,12 @@ nav {
         font-size: 1.5em;
         z-index: 99;        
         width: 100vw;
-        height: 129.5vh; //for 100vh does not cover the whole vertical viewport. Margins?
+        // height: 129.5vh; //for 100vh does not cover the whole vertical viewport. Margins?
+        
+        //CODE BELOW ALL TESTING
+        clip-path: circle(1000px at 90% -10%);
+        -webkit-clip-path: circle(1000px at 90% 17%);
+        transition: all 2.5s;
     }
 }
 
@@ -166,7 +188,7 @@ nav {
             display: none;
         }
         .navMenu {
-            display: block;
+            display: contents;
             // position: fixed; 
             // top: 1.125rem;
             // right: 1.875rem;

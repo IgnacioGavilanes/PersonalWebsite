@@ -73,11 +73,20 @@
             }
         }
     }
-    #progressBarWrapper{
-        display: none;
-    }
+
 }
 
+
+//  /* Hide scrollbar for Chrome, Safari and Opera */
+//  .course::-webkit-scrollbar {
+//     display: none;
+// }
+
+// /* Hide scrollbar for IE, Edge and Firefox */
+// .course {
+//     -ms-overflow-style: none;  /* IE and Edge */
+//     scrollbar-width: none;  /* Firefox */
+// }
 
 //Media Queries
 @media (max-width: 397px) {
@@ -126,29 +135,6 @@
         .topicsWrapper{ //HAS BORDER & BACKGROUND ON DESKTOP 
             .courseCol1, .courseCol2{
                 li {
-                }
-            }
-        }
-        //HERE GOES PROGRESS BAR ON DESKTOP 
-        #progressBarWrapper{
-            justify-content: center;
-            align-items: center;
-            .num{
-                font-family: $secondary-font;
-                margin: 0 1rem auto 1rem;
-            }
-            display: flex;
-            #progressBar {
-                #filledBar{
-                    height: 0.2rem;
-                    background-color: $accent;
-                    transition: all 1s;
-                }
-                #emptyBar{
-                    
-                    width: 15rem;
-                    height: 0.1rem;
-                    background-color: gray;
                 }
             }
         }

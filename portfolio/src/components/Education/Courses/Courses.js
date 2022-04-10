@@ -12,8 +12,6 @@ export const Courses = ({id, title, institution, modality, dates, repo, topics, 
     const courseCol1  = topics.slice().splice(0, middleIndex);   
     const courseCol2  = topics.slice().splice(-middleIndex);
 
-    // console.log(`coursesAmount (prop): ${id/coursesAmount*15}`)
-
   return (
         <div className='course' id={`course${id}`}>
             <div className='courseInfo'>
@@ -46,17 +44,6 @@ export const Courses = ({id, title, institution, modality, dates, repo, topics, 
                 </ul>
             </div>
             }
-
-            <span id='progressBarWrapper'>
-                <h6 className='num'>{id}</h6>
-                <div id='progressBar'>
-                    <div id='filledBar' style={{width: `${id/coursesAmount*15}rem`}}/> 
-                    <div id='emptyBar'/>
-                </div>
-                <h6 className='num'> 3</h6>
-            </span>
-
-            {/* HERE GOES PROGRESS BAR FOR DESKTOP */}
         </div>
     )
 }

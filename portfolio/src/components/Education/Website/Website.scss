@@ -50,7 +50,8 @@
         .websiteRepoInfo{}
         .websiteRepoLink{
             text-align: center;
-
+            display: flex;
+            justify-content: center;
             text-decoration: none;
             color: black;
             .websiteRepoText{

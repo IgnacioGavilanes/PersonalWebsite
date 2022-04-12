@@ -14,6 +14,7 @@ export const Courses = ({id, title, institution, modality, dates, repo, topics, 
 
   return (
         <div className='course' id={`course${id}`}>
+            <hr/>
             <div className='courseInfo'>
                 <h3 className='courseTitle'>
                     {title}

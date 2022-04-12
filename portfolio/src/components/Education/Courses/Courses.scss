@@ -34,7 +34,8 @@
             text-decoration: none;
             color: black;
             display: flex;
-            align-items: flex-end;
+            align-items: center;
+            justify-content: center;
             .courseRepoText{
                 // margin-top: 12rem; //RECENTLY ADDED
                 font-weight: 400;
@@ -77,16 +78,6 @@
 }
 
 
-//  /* Hide scrollbar for Chrome, Safari and Opera */
-//  .course::-webkit-scrollbar {
-//     display: none;
-// }
-
-// /* Hide scrollbar for IE, Edge and Firefox */
-// .course {
-//     -ms-overflow-style: none;  /* IE and Edge */
-//     scrollbar-width: none;  /* Firefox */
-// }
 
 //Media Queries
 @media (max-width: 397px) {
@@ -122,6 +113,7 @@
             .courseDates{
             }
             .courseRepoLink{
+                justify-content: flex-start;
                 .courseRepoText{
                     &:hover {
                     }

@@ -153,7 +153,7 @@ export const Education = () => {
                     <div id='filledBar' style={{width: `${courseNumber/coursesListLength*15}rem`}}/> 
                     <div id='emptyBar'/>
                 </div>
-                <h6 className='num'> 3</h6>
+                <h6 className='num'> {coursesListLength}</h6>
             </span>
 
         <div className='cvButtonWrapper'>

@@ -13,6 +13,7 @@ nav {
         align-items: center;
         .logo {
 
+            cursor: default;
             //Unable text selection
             -webkit-user-select: none; /* Safari */        
             -moz-user-select: none; /* Firefox */
@@ -132,6 +133,7 @@ nav {
 
     .mobileInactive {
         pointer-events: none;
+        color: black;
 
         //CODE BELOW ALL TESTING
         clip-path: circle(50px at 90% 10%);
@@ -212,6 +214,13 @@ nav {
                 .inNavLogoWrapper {
                     display: none;
                 }
+
+                .linkTest{
+                    transition: $hoverTransition;
+                    color: $accent;
+                    font-size: 1.563rem;
+                    font-weight: 700;
+                }
             }
         }
         .mobileInactive {
@@ -219,3 +228,14 @@ nav {
         }
     }
 }
+
+
+
+
+
+
+
+
+
+
+

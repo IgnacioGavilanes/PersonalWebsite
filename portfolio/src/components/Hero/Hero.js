@@ -20,7 +20,7 @@ export const Hero = () => {
         <div className='heroWrapper'>
             <h3 className='heroSubTitle'>I’m Ignacio Gavilanes <span className='wave'>👋🏼</span></h3>
             <p className='heroInfo'>a self-taught,<span className='heroHighlighted'> —hopefully soon-to-be—</span>, web developer. You can either keep scrolling to learn more about me or you can go straight to my</p>
-            <Link to='education' smooth={true} duration={1500}><button id='cta'>Education</button></Link>
+            <Link to='education' smooth={true} duration={1500} ><button id='cta'>Education</button></Link>
         </div>
 
     </section>
